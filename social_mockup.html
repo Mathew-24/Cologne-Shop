@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Social Mockups — VenzCologne</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:Inter,Arial,sans-serif;background:#f4f7fb;padding:18px;color:#111}
+    .wrap{max-width:980px;margin:0 auto;display:grid;gap:16px}
+    .card{background:white;border-radius:12px;padding:14px;box-shadow:0 6px 20px rgba(11,20,30,.06)}
+    .fb{border-left:6px solid #3b5998}
+    .ig{border-left:6px solid #e1306c}
+    .yt{border-left:6px solid #ff0000}
+    .title{font-weight:700;margin-bottom:8px}
+    .meta{color:#6b7280;font-size:13px;margin-bottom:8px}
+    img{width:100%;border-radius:8px;display:block;margin-top:8px}
+    .highlight{outline:3px solid rgba(11,116,209,.12);}
+    @media(min-width:900px){ .wrap{grid-template-columns:1fr 1fr} .wrap .yt{grid-column:1/3} }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="wrap">
+    <!-- JS fills -->
+  </div>
+
+  <script>
+    function q(name){ const params=new URLSearchParams(location.search); return params.get(name) || ''; }
+    const name = decodeURIComponent(q('name'));
+    const email = decodeURIComponent(q('email'));
+    const phone = decodeURIComponent(q('phone'));
+    const subject = decodeURIComponent(q('subject')) || '';
+    const message = decodeURIComponent(q('message') || '');
+    const platform = decodeURIComponent(q('platform') || '');
+
+    function escapeHtml(s){ return String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('\"','&quot;'); }
+
+    const wrap = document.getElementById('wrap');
+
+    // Facebook card
+    const fb = document.createElement('div'); fb.className='card fb' + (platform==='facebook'?' highlight':'');
+    fb.innerHTML = `
+      <div class="title">Facebook Post Preview</div>
+      <div class="meta">VenzCologne · ${escapeHtml(name || 'VenzCologne')}</div>
+      <div>${escapeHtml(subject ? subject + '\\n\\n' + message : message)}</div>
+      <img src="pro1.png" alt="product image" onerror="this.style.opacity=.6;this.alt='image'">
+      <div class="meta">#VenzCologne #Fragrance</div>
+    `;
+    wrap.appendChild(fb);
+
+    // Instagram card
+    const ig = document.createElement('div'); ig.className='card ig' + (platform==='instagram'?' highlight':'');
+    ig.innerHTML = `
+      <div class="title">Instagram Post Preview</div>
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+        <div style="width:44px;height:44px;background:#e1306c;border-radius:8px;color:white;display:flex;align-items:center;justify-content:center;font-weight:700">VC</div>
+        <div><strong>@venz_cologne</strong><div class="meta">${escapeHtml(name || '')}</div></div>
+      </div>
+      <img src="pro2.png" alt="product image">
+      <div style="margin-top:8px">${escapeHtml(subject ? subject + ' — ' + message : message)}</div>
+      <div class="meta">❤️ 1.2k &nbsp; 💬 87</div>
+    `;
+    wrap.appendChild(ig);
+
+    // YouTube / Video promo card
+    const yt = document.createElement('div'); yt.className='card yt' + (platform==='youtube'?' highlight':'');
+    yt.innerHTML = `
+      <div class="title">YouTube / Video Preview</div>
+      <div class="meta">VenzCologne • ${escapeHtml(name || '')}</div>
+      <div style="background:#000;color:white;border-radius:10px;padding:36px;text-align:center">Video Player (mock)</div>
+      <p style="margin-top:8px">${escapeHtml(subject || '')}</p>
+      <p class="meta">${escapeHtml(message)}</p>
+    `;
+    wrap.appendChild(yt);
+  </script>
+</body>
+</html>

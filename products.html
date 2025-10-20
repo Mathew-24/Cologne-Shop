@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cologne Shop - Products</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Venz<span>Cologne</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="products-section">
+    <h2>Our Collection</h2>
+    <input type="text" id="search" placeholder="Search fragrance..." onkeyup="searchProducts()">
+
+    <div class="product-grid">
+
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <img src="pro1.png" alt="Cologne 1">
+        <h3>La Feur</h3>
+        <p>₱ 599</p>
+        <button onclick="addToCart('Product 1')">Add to Cart</button>
+        <div class="rating">⭐ 
+          <span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <img src="pro2.png" alt="Cologne 2">
+        <h3>Zen Mur</h3>
+        <p>₱ 599</p>
+        <button onclick="addToCart('Product 2')">Add to Cart</button>
+        <div class="rating">⭐ 
+          <span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <img src="pro3.png" alt="Cologne 3">
+        <h3>Fleur Pink</h3>
+        <p>₱ 599</p>
+        <button onclick="addToCart('Product 3')">Add to Cart</button>
+        <div class="rating">⭐ 
+          <span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="product-card">
+        <img src="pro4.png" alt="Cologne 4">
+        <h3>Este Muer</h3>
+        <p>₱ 599</p>
+        <button onclick="addToCart('Product 4')">Add to Cart</button>
+        <div class="rating">⭐ 
+          <span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span><span onclick="rate(this)">☆</span>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </section>
+</body>
+</html>

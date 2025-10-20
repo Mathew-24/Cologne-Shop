@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VenzCologne - Contact Us</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Map Styling ===== */
+    #map-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    #map-section h2 {
+      color: #333;
+      margin-bottom: 12px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Venz<span>Cologne</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </header>
+
+  <main style="padding:2rem;max-width:900px;margin:1.5rem auto;">
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+
+      <form id="contactForm" class="contact-form" autocomplete="off">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Your full name" required>
+
+        <label>Contact Number:</label>
+        <input type="text" id="phone" placeholder="09xxxxxxxxx">
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label>Subject:</label>
+        <input type="text" id="subject" placeholder="Short headline (optional)">
+
+        <label>Message:</label>
+        <textarea id="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+        <label>Marketing Platform:</label>
+        <select id="platform" required>
+          <option value="">-- Select platform --</option>
+          <option value="email">Email Marketing</option>
+          <option value="social">Social Media Marketing</option>
+        </select>
+
+        <div id="socialPick" style="display:none;margin-top:8px;">
+          <label>Social Platform Preview:</label>
+          <select id="socialPlatform">
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="youtube">YouTube</option>
+          </select>
+          <small class="small">(Used only for social mockup style)</small>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+          <button id="previewBtn" class="btn">Preview / Go</button>
+          <button id="saveMsg" type="button" class="secondary">Save Message (local)</button>
+        </div>
+      </form>
+
+      <div id="savedNotice" style="margin-top:10px;"></div>
+    </section>
+
+    <!-- ===== Google Maps Section ===== -->
+    <section id="map-section">
+      <h2>Find Us Here</h2>
+      <!-- Your Google Maps Embed -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15412.291445400497!2d120.52458631189151!3d15.044085690294867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f52e48450f7f%3A0x781abc3697882894!2sPalat%2C%20Porac%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1760716991530!5m2!1sen!2sph"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:1.2rem 0;color:#aab8c5;">
+    © 2025 VenzCologne. All Rights Reserved.
+  </footer>
+
+  <script src="contact-script.js"></script>
+</body>
+</html>

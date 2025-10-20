@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cologne Shop - Features</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1117; /* Dark mode background */
+      color: #e6edf3; /* Light text */
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .logo span {
+      color: #e6edf3;
+      font-weight: 400;
+    }
+
+    .navbar nav a {
+      color: white;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #a3c9ff;
+    }
+
+    /* Intro Section */
+    .intro-section {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg, #6fb1fc, #4364f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 1.2rem;
+      color: #a3c9ff;
+      line-height: 1.6;
+    }
+
+    /* Section Styling */
+    .features-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #6fb1fc;
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      padding: 2rem;
+      border-radius: 20px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    /* Infographic */
+    .infographic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .info-step {
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      padding: 2rem;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .info-step:hover {
+      transform: scale(1.05);
+    }
+
+    .info-step::before {
+      content: attr(data-step);
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background: #0d1117;
+      color: #6fb1fc;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .info-step h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .info-step p {
+      font-size: 1rem;
+      margin: 0.5rem 0 0;
+    }
+
+    /* Bottom Highlight */
+    .bottom-highlight {
+      margin-top: 5rem;
+      padding: 2rem;
+      border-radius: 15px;
+      background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+      color: white;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #0052d4; }
+      to { box-shadow: 0 0 25px #6fb1fc; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Venz<span>Cologne</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <h1>Welcome to VenzCologne</h1>
+    <p>Step into a world of elegance and freshness. Our premium colognes are designed to not only elevate your presence but also reflect your unique personality. Every bottle is a story of sophistication, crafted to stay with you all day.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Why Choose Our Cologne?</h2>
+    <div class="features-grid">
+      <div class="feature-card">🌸 Long-lasting fragrance</div>
+      <div class="feature-card">🌿 Natural ingredients</div>
+      <div class="feature-card">✨ Elegant packaging</div>
+      <div class="feature-card">🌍 Eco-friendly production</div>
+    </div>
+
+    <!-- Infographic -->
+    <div class="infographic">
+      <div class="info-step" data-step="1">
+        <h3>Crafting</h3>
+        <p>Each bottle is blended with premium oils and botanicals.</p>
+      </div>
+      <div class="info-step" data-step="2">
+        <h3>Design</h3>
+        <p>Elegant packaging with a modern aesthetic touch.</p>
+      </div>
+      <div class="info-step" data-step="3">
+        <h3>Experience</h3>
+        <p>A scent that lasts all day, keeping you fresh and confident.</p>
+      </div>
+      <div class="info-step" data-step="4">
+        <h3>Sustainability</h3>
+        <p>Eco-friendly production that respects nature.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Highlight -->
+    <div class="bottom-highlight">
+      🌟 Discover a fragrance that defines you — elegant, lasting, and kind to nature. 🌟
+    </div>
+  </section>
+</body>
+</html>

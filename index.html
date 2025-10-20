@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cologne Shop - Home</title>
+  
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1117;
+      color: #e6edf3;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .logo span {
+      color: #e6edf3;
+      font-weight: 400;
+    }
+
+    .navbar nav a {
+      color: white;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #a3c9ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('your-image.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 700px;
+      padding: 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #6fb1fc, #4364f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #d0e4ff;
+    }
+
+    .hero-content .btn {
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-content .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(111,177,252,0.6);
+    }
+
+    /* Intro Section */
+    .intro-section {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .intro-section h2 {
+      font-size: 2.2rem;
+      color: #6fb1fc;
+    }
+
+    .intro-section p {
+      font-size: 1.2rem;
+      color: #a3c9ff;
+      line-height: 1.6;
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #6fb1fc;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+      padding: 2rem;
+      border-radius: 20px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    /* Bottom Highlight */
+    .bottom-highlight {
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 15px;
+      background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+      color: white;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #0052d4; }
+      to { box-shadow: 0 0 25px #6fb1fc; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Venz<span>Cologne</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to VenzCologne</h1>
+      <p>Discover fragrances that define your personality. Elegant. Long-lasting. Eco-friendly.</p>
+      <!-- Button now redirects to feature.html -->
+      <button class="btn" onclick="window.location.href='products.html'">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <h2>Our Promise</h2>
+    <p>Step into a world of elegance and freshness. Our premium colognes are designed to not only elevate your presence but also reflect your unique personality. Every bottle is a story of sophistication, crafted to stay with you all day.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Why Choose Our Cologne?</h2>
+    <div class="features-grid">
+      <div class="feature-card">🌸 Long-lasting fragrance</div>
+      <div class="feature-card">🌿 Natural ingredients</div>
+      <div class="feature-card">✨ Elegant packaging</div>
+      <div class="feature-card">🌍 Eco-friendly production</div>
+    </div>
+    <div class="bottom-highlight">
+      🌟 Discover a fragrance that defines you — elegant, lasting, and kind to nature. 🌟
+    </div>
+  </section>
+</body>
+</html>
